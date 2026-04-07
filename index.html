@@ -6,13 +6,19 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Meu Portifólio</title>
 </head>
-<body>
+<!-- This is the nav-bar with a menu section -->
 <header>
-    <nav>
-        <div>
+    <nav class="navbar">
+        <div class="container logo-name">
+            <span>
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="30px" height="30px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16L3.54223 12.3383C1.93278 11.0162 1 9.04287 1 6.96005C1 3.11612 4.15607 0 8 0C11.8439 0 15 3.11612 15 6.96005C15 9.04287 14.0672 11.0162 12.4578 12.3383L8 16ZM3 6H5C6.10457 6 7 6.89543 7 8V9L3 7.5V6ZM11 6C9.89543 6 9 6.89543 9 8V9L13 7.5V6H11Z" fill="#000000"/>
+                </svg>
+            </span>
             <span>Marcos Vinícius</span>
         </div>
-        <ul class="nav-menu">
+        <ul class="container nav-menu">
             <li><a href="#home">Início</a></li>
             <li><a href="#sobre">Sobre Mim</a></li>
             <li><a href="#projetos">Projetos</a></li>
@@ -20,5 +26,28 @@
         </ul>
     </nav>
 </header>
+<body>
+<!-- Section about me -->
+ <section id="about-me">
+    <img src="/assets/images/me.png" alt="Foto de Marcos Vinícius">
+    <div id="description-about-me">
+        <h1>Sobre mim</h1>
+        <h4>
+            Estudante de Análise e Desenvolvimento de Sistemas
+        </h4>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nesciunt adipisci quibusdam rem magnam porro amet id eligendi placeat modi, earum doloremque sit maiores aliquam sed soluta voluptatibus voluptate suscipit.
+        </p>
+    </div>
+ </section>
+ <section id="projects">
+    <div class="card-project">
+        <img src="/assets/images/me.png" alt="Foto de Marcos Vinícius">
+        <div class="card-project-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, facere.</p>
+            <a class="primary-button" href="#">Ver Projeto</a>
+        </div>
+    </div>
+ </section>
 </body>
 </html>

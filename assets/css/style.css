@@ -40,6 +40,17 @@ section {
     gap: 1rem;
 }
 
+.tray-nav-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+    width: 100%;
+    top: calc(100%);
+    left: 0px;
+}
+
 #about-me {
     display: flex;
     justify-content: space-around;
@@ -139,5 +150,26 @@ section {
     }
     img {
         width: 100%;
+    }
+}
+
+#menu-icon {
+    display: none;
+    img {
+        max-width: 40px;
+    }
+}
+
+/* Responsivity */
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-menu {
+        display: none;
     }
 }

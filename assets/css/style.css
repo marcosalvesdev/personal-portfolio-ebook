@@ -5,10 +5,19 @@
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 section {
     padding: 3rem 3rem 0rem;
+}
+
+footer {
+    display: flex;
+    padding: 1rem;
+    justify-content: start;
+    background-color: rgb(232, 232, 232);
+    margin-top: 20px;
 }
 
 .primary-button {
@@ -37,18 +46,10 @@ section {
 
 .nav-menu {
     margin-right: 0.5rem;
-    gap: 1rem;
-}
-
-.tray-nav-menu {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1em;
-    width: 100%;
-    top: calc(100%);
-    left: 0px;
+    gap: 2rem;
+    a {
+        color: black;
+    }
 }
 
 #about-me {
@@ -80,8 +81,8 @@ section {
     row-gap: 1em;
     .container {
         flex-wrap: wrap;
+        justify-content: space-evenly;
         padding: 0px;
-        justify-content: space-between;
         gap: 1em;
     }
 }
@@ -160,6 +161,18 @@ section {
     }
 }
 
+#goTop {
+    position: fixed;
+    align-items: center;
+    border-radius: 100%;
+    right: 2em;
+    bottom: 3em;
+    z-index: 1000;
+    img {
+        width: 3em;
+    }
+}
+
 /* Responsivity */
 @media (max-width: 768px) {
     .navbar {
@@ -170,6 +183,55 @@ section {
         cursor: pointer;
     }
     .nav-menu {
-        display: none;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1em;
+        width: 100%;
+        top: calc(100%);
+        left: 0px;
+        background-color: black;
+        padding: 1em;
+
+        /* Transition*/
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s ease-in-out;
+
+        li {
+            width: 100%;
+        }
+        a {
+            padding: 0.5em;
+            color: white;
+            display: flex;
+        }
+    }.is-open {
+        transform: scaleY(1);
+    }
+
+    #about-me {
+        display: block;
+    }
+
+    #about-me > img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    #contacts {
+        padding: 3rem 1em;
+        form {
+            width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 659px) {
+    .card-project {
+        min-width: 100%;
     }
 }
